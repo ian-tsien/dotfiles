@@ -17,8 +17,8 @@ opt.showmode = false            -- Hide default mode text (Lualine handles it)
 
 -- Indentation ---------------------------------------------------------------
 opt.expandtab = true            -- Use spaces instead of tabs
-opt.shiftwidth = 2              -- Indent size
-opt.tabstop = 2                 -- Tab width
+opt.shiftwidth = 4              -- Indent size
+opt.tabstop = 4                 -- Tab width
 opt.smartindent = true          -- Smart indentation
 
 -- Search ---------------------------------------------------------------------
@@ -39,12 +39,12 @@ opt.clipboard = "unnamedplus"   -- Use system clipboard
 -- Performance ----------------------------------------------------------------
 opt.updatetime = 250            -- Faster completion & CursorHold
 opt.timeoutlen = 500            -- Mapped sequence wait time
-opt.lazyredraw = true           -- Faster scrolling
+-- opt.lazyredraw = true           -- Faster scrolling
 opt.scrolloff = 8               -- Keep lines above/below cursor
 
 -- Editing --------------------------------------------------------------------
 opt.autoindent = true
-opt.completeopt = { "menu", "menuone", "noselect" }
+opt.completeopt = { "menu", "menuone", "noinsert", "noselect" }
 opt.virtualedit = "block"       -- Visual block cursor beyond text
 
 -- Behaviour ------------------------------------------------------------------
@@ -56,10 +56,7 @@ opt.shortmess:append("sI")      -- Disable intro message
 -- Diagnostics ---------------------------------------------------------------
 vim.diagnostic.config({
   virtual_text = false,         -- Turn off inline error text
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
+  float = { border = "rounded" },
 })
 
 -- Fold (simple & modern) ----------------------------------------------------

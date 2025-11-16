@@ -37,13 +37,13 @@ require("lazy").setup({
 
 	defaults = {
 		lazy = true,
-		version = false,
+		version = "*",
 	},
 
 	install = { colorscheme = { "tokyonight", "habamax" } },
 
 	checker = {
-		enabled = true,
+		enabled = false,
 		notify = false,
 	},
 
@@ -53,11 +53,10 @@ require("lazy").setup({
 	},
 
 	performance = {
+    cache = { enabled = true },
 		rtp = {
 			disabled_plugins = {
 				"gzip",
-				"matchit",
-				"netrwPlugin",
 				"tarPlugin",
 				"tohtml",
 				"tutor",
