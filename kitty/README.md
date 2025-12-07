@@ -18,4 +18,5 @@ sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.loca
 echo 'kitty.desktop' > ~/.config/xdg-terminals.list
 ```
 
-2. Install [fonts](https://www.nerdfonts.com/font-downloads) (Hack Nerd Font).
+2.Unzip the archive and install [fonts](https://www.nerdfonts.com/font-downloads) (`FiraCode Nerd Font Mono`).
+Unpack fonts to `~/.local/share/fonts` (or `/usr/share/fonts`, to install fonts system-wide) and `fc-cache -f -v`.
