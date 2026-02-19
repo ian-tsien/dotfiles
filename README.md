@@ -46,3 +46,20 @@ echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
    Better to `touch` a new `zsh` configure file named `.zshenv` to store other plugins' configuration, such as
    `export=..`, etc. Leave the `.zshrc` alone with configuration not referring to any other tools other than
    `zsh` itself and some OS options, such as making a proxy setting.
+
+## `tmux`
+
+1. Install `tmux` and `TPM (Tmux Plugin Manager)`:
+
+```shell
+sudo apt install tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+2. Install recommended tools:
+
+```shell
+sudo apt-get install bash bc coreutils gawk git jq playerctl xsel
+```
+
+3. Configure `tmux` by modifying `~/.tmux.conf`.
